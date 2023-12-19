@@ -1,5 +1,16 @@
 # The chat room
 
+## Requirements
+
+- Each tab will serve as a chat room, the user should provide a username and then it can start
+  chatting with the other connected users (use socket.io or GraphQL subscriptions )
+- The messages list should display them in the correct order with the formatted timestamp the
+  message was sent and their respective author.
+- Send text only (with simple validation).
+- Show a different style for incoming and outgoing messages (position, color, etc.).
+- Keep chat history in a database (MongoDB is highly recommended).
+- Pull and show old messages using an API (REST or GraphQL).
+
 ## Prerequisites
 
 - Docker
@@ -20,7 +31,7 @@
 
 ##### Comments
 
-- Application is build in express, provides a socket connection and RESTful APIs to handle data. It is built in javascript for no reason even that I might have been in Typescript using Nodejs.
+- Application is build in express, provides a socket connection and RESTful APIs to handle data. It is built in javascript for no reason even that it might have been in Typescript using Nodejs.
 - All environment variables are preprocessed in the config folder.
 - No injection pattern for services was provided since this was an specific demo that required simple connection with node.
 - As part of separation of concerns, a some code might look similar, this is in order to make a feature maintainable and not create one `smart` code that can be reused.

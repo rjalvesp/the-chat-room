@@ -4,7 +4,9 @@ import Chat from "@sellia/components/Chat/Chat";
 import RegisterAuthor from "@sellia/components/RegisterAuthor/RegisterAuthor";
 
 function App() {
-  const [hasSessionStarted, setHasSessionStarted] = useState(false);
+  const [hasSessionStarted, setHasSessionStarted] = useState(
+    !!sessionStorage.id
+  );
 
   return hasSessionStarted ? (
     <Chat />
